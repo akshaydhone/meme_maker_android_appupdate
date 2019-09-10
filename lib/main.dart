@@ -89,7 +89,7 @@ class MyAppState extends State<MyApp> {
             ),
           ],
         ),
-        //body:  _buildBody(),
+        body:  _buildBody(),
         bottomNavigationBar: _bottemTab(),
 
       ),
@@ -190,7 +190,6 @@ class MyAppState extends State<MyApp> {
             icon: Icon(Icons.person,color: Colors.white,),
             title: Text(
               'Me',style: TextStyle(color: Colors.white),)),
-
       ],);
   }
 

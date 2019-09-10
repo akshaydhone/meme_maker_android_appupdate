@@ -16,31 +16,31 @@ class HomeFeedPage extends StatefulWidget {
 class _HomeFeedPageState extends State<HomeFeedPage> {
   final _posts = <Post>[
     Post(
-      user: grootlover,
+      user: akshaydhone,
       imageUrls: [
-        'assets/images/groot1.jpg',
+        'assets/images/use.png',
         'assets/images/groot4.jpg',
         'assets/images/groot5.jpg',
       ],
       likes: [
-        Like(user: rocket),
-        Like(user: starlord),
-        Like(user: gamora),
-        Like(user: nickwu241),
+        Like(user: niteshkhanna),
+        Like(user: pawankumar),
+        Like(user: rahuljain),
+        Like(user: abhisheksingh),
       ],
       comments: [
         Comment(
-          text: 'So we’re saving the galaxy again? #gotg',
-          user: rocket,
+          text: 'So we’re saving the galaxy again?',
+          user: niteshkhanna,
           commentedAt: DateTime(2019, 5, 23, 14, 35, 0),
-          likes: [Like(user: nickwu241)],
+          likes: [Like(user: abhisheksingh)],
         ),
       ],
       location: 'Earth',
       postedAt: DateTime(2019, 5, 23, 12, 35, 0),
     ),
     Post(
-      user: nickwu241,
+      user: abhisheksingh,
       imageUrls: ['assets/images/groot2.jpg'],
       likes: [],
       comments: [],
@@ -48,9 +48,9 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
       postedAt: DateTime(2019, 5, 21, 6, 0, 0),
     ),
     Post(
-      user: nebula,
+      user: rajkumarshetty,
       imageUrls: ['assets/images/groot6.jpg'],
-      likes: [Like(user: nickwu241)],
+      likes: [Like(user: abhisheksingh)],
       comments: [],
       location: 'Nine Realms',
       postedAt: DateTime(2019, 5, 2, 0, 0, 0),
@@ -75,11 +75,11 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
 class StoriesBarWidget extends StatelessWidget {
   final _users = <User>[
     currentUser,
-    grootlover,
-    rocket,
-    nebula,
-    starlord,
-    gamora,
+    akshaydhone,
+    niteshkhanna,
+    rajkumarshetty,
+    pawankumar,
+    rahuljain,
   ];
 
   void _onUserStoryTap(BuildContext context, int i) {

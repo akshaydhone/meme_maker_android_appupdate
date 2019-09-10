@@ -3,30 +3,30 @@ import 'package:timeago/timeago.dart' as timeago;
 
 const placeholderStories = <Story>[Story()];
 
-const nickwu241 =
-    User(name: 'nickwu241', imageUrl: 'assets/images/nickwu241.jpg');
-const grootlover = User(
-    name: 'grootlover',
+const abhisheksingh =
+    User(name: 'abhisheksingh', imageUrl: 'assets/images/nickwu241.jpg');
+const akshaydhone = User(
+    name: 'akshaydhone',
     imageUrl: 'assets/images/grootlover.jpg',
     stories: placeholderStories);
-const starlord = User(
-    name: 'starlord',
+const pawankumar = User(
+    name: 'pawankumar',
     imageUrl: 'assets/images/starlord.jpg',
     stories: placeholderStories);
-const gamora = User(
-    name: 'gamora',
+const rahuljain = User(
+    name: 'rahuljain',
     imageUrl: 'assets/images/gamora.jpg',
     stories: placeholderStories);
-const rocket = User(
-    name: 'rocket',
+const niteshkhanna = User(
+    name: 'niteshkhanna',
     imageUrl: 'assets/images/rocket.jpg',
     stories: placeholderStories);
-const nebula = User(
-    name: 'nebula',
+const rajkumarshetty = User(
+    name: 'rajkumarshetty',
     imageUrl: 'assets/images/nebula.jpg',
     stories: placeholderStories);
 
-const currentUser = nickwu241;
+const currentUser = abhisheksingh;
 
 class Post {
   List<String> imageUrls;
