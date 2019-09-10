@@ -14,11 +14,15 @@ class HomeFeedPage extends StatefulWidget {
 }
 
 class _HomeFeedPageState extends State<HomeFeedPage> {
+
   final _posts = <Post>[
+
     Post(
+
       user: akshaydhone,
+
       imageUrls: [
-        'assets/images/use.png',
+        'assets/images/mick.png',
         'assets/images/groot4.jpg',
         'assets/images/groot5.jpg',
       ],
@@ -36,23 +40,58 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
           likes: [Like(user: abhisheksingh)],
         ),
       ],
-      location: 'Earth',
+      location: 'Webcubic',
+
       postedAt: DateTime(2019, 5, 23, 12, 35, 0),
+
     ),
     Post(
       user: abhisheksingh,
-      imageUrls: ['assets/images/groot2.jpg'],
+      imageUrls: ['assets/images/react.png'],
       likes: [],
       comments: [],
-      location: 'Knowhere',
+      location: 'Andheri West',
       postedAt: DateTime(2019, 5, 21, 6, 0, 0),
     ),
     Post(
       user: rajkumarshetty,
-      imageUrls: ['assets/images/groot6.jpg'],
+      imageUrls: ['assets/images/shick.png'],
       likes: [Like(user: abhisheksingh)],
       comments: [],
-      location: 'Nine Realms',
+      location: 'Bandra Terminus',
+      postedAt: DateTime(2019, 5, 2, 0, 0, 0),
+    ),
+
+
+
+    Post(
+      user: abhisheksingh,
+      imageUrls: ['assets/images/ar1.png'],
+      likes: [Like(user: abhisheksingh)],
+      comments: [],
+      location: 'Dadar Station',
+      postedAt: DateTime(2019, 5, 2, 0, 0, 0),
+    ),
+
+
+
+
+    Post(
+      user: rahuljain,
+      imageUrls: ['assets/images/ar2.png'],
+      likes: [Like(user: abhisheksingh)],
+      comments: [],
+      location: 'Prabhadevi Station',
+      postedAt: DateTime(2019, 5, 2, 0, 0, 0),
+    ),
+
+
+    Post(
+      user: rajkumarshetty,
+      imageUrls: ['assets/images/ar3.png'],
+      likes: [Like(user: abhisheksingh)],
+      comments: [],
+      location: 'Churchgate Station',
       postedAt: DateTime(2019, 5, 2, 0, 0, 0),
     ),
   ];
@@ -74,12 +113,7 @@ class _HomeFeedPageState extends State<HomeFeedPage> {
 
 class StoriesBarWidget extends StatelessWidget {
   final _users = <User>[
-    currentUser,
-    akshaydhone,
-    niteshkhanna,
-    rajkumarshetty,
-    pawankumar,
-    rahuljain,
+
   ];
 
   void _onUserStoryTap(BuildContext context, int i) {

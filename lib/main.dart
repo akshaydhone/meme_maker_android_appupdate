@@ -83,7 +83,7 @@ class MyAppState extends State<MyApp> {
               return IconButton(
                 color: Colors.black,
                 icon: new Image.asset("assets/images/chatm.png"),
-                //onPressed: () => showSnackbar(context, 'My Messages'),
+                onPressed: () => showSnackbar(context, 'My Messages'),
               );
             }
             ),
@@ -118,6 +118,7 @@ class MyAppState extends State<MyApp> {
       _lastFeedScrollOffset = _scrollController.offset;
       _scrollController.dispose();
       _scrollController = null;
+      
     }
   }
 
@@ -134,7 +135,9 @@ class MyAppState extends State<MyApp> {
 
   Widget _buildBody() {
     switch (_tabSelectedIndex) {
+
       case 0:
+
         _scrollController =
             ScrollController(initialScrollOffset: _lastFeedScrollOffset);
         return HomeFeedPage(scrollController: _scrollController);

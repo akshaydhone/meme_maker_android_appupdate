@@ -13,6 +13,7 @@ import 'package:meme_maker/ui_utils.dart';
 class PostWidget extends StatefulWidget {
   final Post post;
 
+
   PostWidget(this.post);
 
   @override
@@ -51,12 +52,16 @@ class _PostWidgetState extends State<PostWidget> {
   void _showAddCommentModal() {
     showModalBottomSheet(
       context: context,
+
       builder: (BuildContext context) {
+
         return Padding(
+
           padding:
               EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
           child: AddCommentModal(
             user: currentUser,
+
             onPost: (String text) {
               setState(() {
                 widget.post.comments.add(Comment(
@@ -67,6 +72,7 @@ class _PostWidgetState extends State<PostWidget> {
                 ));
               });
               Navigator.pop(context);
+
             },
           ),
         );
@@ -78,6 +84,7 @@ class _PostWidgetState extends State<PostWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
+
         // User Details
         Row(
           children: <Widget>[
@@ -86,10 +93,12 @@ class _PostWidgetState extends State<PostWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(widget.post.user.name, style: bold),
+
                 if (widget.post.location != null) Text(widget.post.location)
               ],
             ),
             Spacer(),
+
             IconButton(
               icon: Icon(Icons.more_vert),
               onPressed: () => showSnackbar(context, 'More'),
@@ -100,7 +109,9 @@ class _PostWidgetState extends State<PostWidget> {
         GestureDetector(
           child: Stack(
             alignment: Alignment.center,
+
             children: <Widget>[
+
               CarouselSlider(
                 items: widget.post.imageUrls.map((url) {
                   return Image.asset(
@@ -113,6 +124,7 @@ class _PostWidgetState extends State<PostWidget> {
                 enableInfiniteScroll: false,
                 onPageChanged: _updateImageIndex,
               ),
+
               HeartOverlayAnimator(
                   triggerAnimationStream: _doubleTapImageEvents.stream),
             ],
@@ -144,6 +156,7 @@ class _PostWidgetState extends State<PostWidget> {
               icon: Icon(OMIcons.nearMe),
               onPressed: () => showSnackbar(context, 'Share'),
             ),
+
             Spacer(),
             if (widget.post.imageUrls.length > 1)
               PhotoCarouselIndicator(
@@ -155,9 +168,16 @@ class _PostWidgetState extends State<PostWidget> {
             IconButton(
               padding: EdgeInsets.zero,
               iconSize: 28.0,
+              icon: Icon(Icons.file_download,color: Colors.black,),
+              onPressed: () => showSnackbar(context, 'Download Image'),
+            ),
+            IconButton(
+              padding: EdgeInsets.zero,
+              iconSize: 28.0,
               icon:
                   _isSaved ? Icon(Icons.bookmark) : Icon(Icons.bookmark_border),
               onPressed: _toggleIsSaved,
+
             )
           ],
         ),
@@ -252,6 +272,7 @@ class PhotoCarouselIndicator extends StatelessWidget {
       children: List.generate(photoCount, (i) => i)
           .map((i) => _buildDot(isActive: i == activePhotoIndex))
           .toList(),
+
     );
   }
 }
@@ -307,6 +328,7 @@ class _AddCommentModalState extends State<AddCommentModal> {
           onPressed:
               _canPost ? () => widget.onPost(_textController.text) : null,
         )
+
       ],
     );
   }

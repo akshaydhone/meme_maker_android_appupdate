@@ -2,7 +2,6 @@ import 'package:meta/meta.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 const placeholderStories = <Story>[Story()];
-
 const abhisheksingh =
     User(name: 'abhisheksingh', imageUrl: 'assets/images/nickwu241.jpg');
 const akshaydhone = User(
@@ -33,9 +32,11 @@ class Post {
   final User user;
   final DateTime postedAt;
 
+
   List<Like> likes;
   List<Comment> comments;
   String location;
+
 
   String timeAgo() {
     final now = DateTime.now();
@@ -67,6 +68,7 @@ class Post {
     @required this.likes,
     @required this.comments,
     this.location,
+
   });
 }
 
