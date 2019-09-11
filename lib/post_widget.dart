@@ -70,7 +70,8 @@ class _PostWidgetState extends State<PostWidget> {
                   commentedAt: DateTime.now(),
                   likes: [],
                 ));
-              });
+              }
+              );
               Navigator.pop(context);
 
             },
@@ -260,6 +261,7 @@ class PhotoCarouselIndicator extends StatelessWidget {
           decoration: BoxDecoration(
             color: isActive ? Colors.blue : Colors.grey,
             borderRadius: BorderRadius.circular(4.0),
+
           ),
         ),
       ),
@@ -269,10 +271,10 @@ class PhotoCarouselIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+
       children: List.generate(photoCount, (i) => i)
           .map((i) => _buildDot(isActive: i == activePhotoIndex))
           .toList(),
-
     );
   }
 }

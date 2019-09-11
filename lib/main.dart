@@ -94,6 +94,7 @@ class MyAppState extends State<MyApp> {
 
       ),
     );
+
   }
 
   void dispose() {
@@ -118,7 +119,7 @@ class MyAppState extends State<MyApp> {
       _lastFeedScrollOffset = _scrollController.offset;
       _scrollController.dispose();
       _scrollController = null;
-      
+
     }
   }
 
