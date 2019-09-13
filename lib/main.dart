@@ -49,7 +49,7 @@ class MyAppState extends State<MyApp> {
         break;
 
       case 2:
-        child=CategoriesPage();
+        child= CategoriesPage();
         break;
       case 3:
         child= FlutterLogo();
@@ -182,6 +182,10 @@ class MyAppState extends State<MyApp> {
       ),
     );
   }
+
+
+
+
   Widget _bottemTab() {
     return new BottomNavigationBar(
       //currentIndex: 0,
@@ -211,5 +215,31 @@ class MyAppState extends State<MyApp> {
       ],
     );
   }
+  Future<void> _optionsDialogBox() {
+    return showDialog(context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            content: new SingleChildScrollView(
+              child: new ListBody(
+                children: <Widget>[
+                  GestureDetector(
+                    child: new Text('Take a picture'),
+                    // onTap: openCamera,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                  ),
+                  GestureDetector(
+                    child: new Text('Select from gallery'),
+                    //onTap: openGallery,
+                  ),
+                ],
+              ),
+            ),
+          );
+        }
+    );
+  }
+
 
 }
