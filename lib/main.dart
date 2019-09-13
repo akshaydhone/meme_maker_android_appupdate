@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'home.dart';
 import 'categories.dart';
 import 'search.dart';
@@ -7,6 +8,8 @@ import 'package:flutter/services.dart';
 import 'package:outline_material_icons/outline_material_icons.dart';
 import 'package:meme_maker/home_feed_page.dart';
 import 'package:meme_maker/ui_utils.dart';
+import 'login_page.dart';
+import 'accountBottomIconScreen.dart';
 
 void main() => runApp(new MyApp());
 class MyApp extends StatefulWidget {
@@ -38,7 +41,7 @@ class MyAppState extends State<MyApp> {
 
     switch(_index) {
       case 0:
-        child = FlutterLogo(colors: Colors.orange);
+        child = _buildBody();
         break;
 
       case 1:
@@ -47,6 +50,12 @@ class MyAppState extends State<MyApp> {
 
       case 2:
         child=CategoriesPage();
+        break;
+      case 3:
+        child= FlutterLogo();
+        break;
+      case 4:
+        child=AccountBottomIconScreen();
         break;
     }
     return MaterialApp(
@@ -89,8 +98,9 @@ class MyAppState extends State<MyApp> {
             ),
           ],
         ),
-        body:  _buildBody(),
+        //body:  _buildBody(),
         bottomNavigationBar: _bottemTab(),
+        body: SizedBox.expand(child: child),
 
       ),
     );
@@ -186,15 +196,20 @@ class MyAppState extends State<MyApp> {
             icon: Icon(Icons.explore,color: Colors.white,),
             title: Text(
               'Explore',style: TextStyle(color: Colors.white),)),
+
+        new BottomNavigationBarItem(
+            icon: Icon(Icons.add_circle_outline,color: Colors.white,),
+            title: Text(
+              'Create',style: TextStyle(color: Colors.white),)),
         new BottomNavigationBarItem(
             icon: Icon(Icons.notifications,color: Colors.white,),
-
             title: Text('Notify',style: TextStyle(color: Colors.white),)),
         new BottomNavigationBarItem(
             icon: Icon(Icons.person,color: Colors.white,),
             title: Text(
-              'Me',style: TextStyle(color: Colors.white),)),
-      ],);
+              'Me',style: TextStyle(color: Colors.white),),),
+      ],
+    );
   }
 
 }

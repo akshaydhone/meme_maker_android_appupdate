@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "129014173032",
+    "firebase_url": "https://memelogin-9c832.firebaseio.com",
+    "project_id": "memelogin-9c832",
+    "storage_bucket": "memelogin-9c832.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129014173032:android:68c30df682999a8a0b9add",
+        "android_client_info": {
+          "package_name": "com.webcubic.meme_maker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129014173032-08ejjtnbh6ehr4l1f10b4apl9sh6sdss.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webcubic.meme_maker",
+            "certificate_hash": "8926444c918a106feb1b2fc9f3f937fdf3fd020b"
+          }
+        },
+        {
+          "client_id": "129014173032-mf0i3tdss0vg44fav1okqgq224armrcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYiZFP6Q7ArK9UuoTtQp0P2uu5gvlcwro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129014173032-mf0i3tdss0vg44fav1okqgq224armrcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
