@@ -49,7 +49,7 @@ class MyAppState extends State<MyApp> {
         break;
 
       case 2:
-        child= CategoriesPage();
+        child= _dialoguebox();
         break;
       case 3:
         child= FlutterLogo();
@@ -194,52 +194,55 @@ class MyAppState extends State<MyApp> {
       type: BottomNavigationBarType.fixed, backgroundColor: Color(0xfffd7878),
       items: [
         new BottomNavigationBarItem(
-            icon: Icon(Icons.home,color: Colors.white,),
+            icon: Icon(Icons.home,color: Colors.white,size: 22.0),
             title: Text('Home',style: TextStyle(color: Colors.white),)),
         new BottomNavigationBarItem(
-            icon: Icon(Icons.explore,color: Colors.white,),
+            icon: Icon(Icons.explore,color: Colors.white,size: 22.0),
             title: Text(
-              'Explore',style: TextStyle(color: Colors.white),)),
+              'Explore',style: TextStyle(color: Colors.white),),),
 
         new BottomNavigationBarItem(
-            icon: Icon(Icons.add_circle_outline,color: Colors.white,),
+            icon: Icon(Icons.add_circle_outline,color: Colors.white,size: 42.0),
             title: Text(
-              'Create',style: TextStyle(color: Colors.white),)),
+              'Create',style: TextStyle(color: Colors.white,),)),
         new BottomNavigationBarItem(
-            icon: Icon(Icons.notifications,color: Colors.white,),
+            icon: Icon(Icons.notifications,color: Colors.white,size: 22.0),
             title: Text('Notify',style: TextStyle(color: Colors.white),)),
         new BottomNavigationBarItem(
-            icon: Icon(Icons.person,color: Colors.white,),
+            icon: Icon(Icons.person,color: Colors.white,size: 22.0),
             title: Text(
               'Me',style: TextStyle(color: Colors.white),),),
       ],
     );
   }
-  Future<void> _optionsDialogBox() {
-    return showDialog(context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            content: new SingleChildScrollView(
-              child: new ListBody(
-                children: <Widget>[
-                  GestureDetector(
-                    child: new Text('Take a picture'),
-                    // onTap: openCamera,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                  ),
-                  GestureDetector(
-                    child: new Text('Select from gallery'),
-                    //onTap: openGallery,
-                  ),
-                ],
-              ),
+
+
+
+
+
+
+  Widget _dialoguebox() {
+    return AlertDialog(
+      content: new SingleChildScrollView(
+        child: new ListBody(
+          children: <Widget>[
+            GestureDetector(
+              child: new Text('Take a picture'),
+              // onTap: openCamera,
             ),
-          );
-        }
+            Padding(
+              padding: EdgeInsets.all(8.0),
+            ),
+            GestureDetector(
+              child: new Text('Select from gallery'),
+              //onTap: openGallery,
+            ),
+          ],
+        ),
+      ),
     );
   }
+
 
 
 }
