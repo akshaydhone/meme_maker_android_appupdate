@@ -49,7 +49,7 @@ class MyAppState extends State<MyApp> {
         break;
 
       case 2:
-        child= _dialoguebox();
+        child=  CategoriesPage();
         break;
       case 3:
         child= FlutterLogo();
@@ -244,6 +244,7 @@ class MyAppState extends State<MyApp> {
       ),
     );
   }
+
 
 
 
