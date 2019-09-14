@@ -49,9 +49,12 @@ class _CategoriesState extends State<CategoriesPage> {
     );
 
     final loginButton = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
+      padding: EdgeInsets.symmetric(vertical: 1.0),
 
-      child:  FlatButton.icon(
+
+      child:
+
+      FlatButton.icon(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
         ),
@@ -59,6 +62,7 @@ class _CategoriesState extends State<CategoriesPage> {
         icon: Icon(Icons.photo_library,size: 25,), //`Icon` to display
         label: Text('Upload a Post', style: TextStyle(color: Colors.black,fontSize: 20),), //`Text` to display
         padding: EdgeInsets.all(15),
+
         onPressed: () {
           //Code to execute when Floating Action Button is clicked
           Navigator.of(context)
@@ -70,7 +74,7 @@ class _CategoriesState extends State<CategoriesPage> {
     );
 
     final layout = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
+      padding: EdgeInsets.symmetric(vertical: 1.0),
       child: FlatButton.icon(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
@@ -90,7 +94,7 @@ class _CategoriesState extends State<CategoriesPage> {
 
 
     final video = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
+      padding: EdgeInsets.symmetric(vertical: 1.0),
       child: FlatButton.icon(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
@@ -120,7 +124,8 @@ class _CategoriesState extends State<CategoriesPage> {
       body: Center(
         child: ListView(
           shrinkWrap: true,
-          padding: EdgeInsets.only(left: 14.0, right: 24.0),
+          padding: EdgeInsets.only(left: 14.0, right: 24.0,top: 0,bottom: 200),
+
           children: <Widget>[
             //logo,
             //SizedBox(height: 48.0),
@@ -129,7 +134,7 @@ class _CategoriesState extends State<CategoriesPage> {
            // password,
             //SizedBox(height: 24.0),
             loginButton,
-            SizedBox(height: 24.0),
+            SizedBox(height: 24.0,),
             layout,
             SizedBox(height: 24.0),
             video,
