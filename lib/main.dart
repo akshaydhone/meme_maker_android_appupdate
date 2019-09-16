@@ -200,9 +200,9 @@ class MyAppState extends State<MyApp> {
             icon: Icon(Icons.home,color: Colors.white,size: 22.0),
             title: Text('Home',style: TextStyle(color: Colors.white),)),
         new BottomNavigationBarItem(
-            icon: Icon(Icons.explore,color: Colors.white,size: 22.0),
-            title: Text(
-              'Explore',style: TextStyle(color: Colors.white),),),
+          icon: Icon(Icons.explore,color: Colors.white,size: 22.0),
+          title: Text(
+            'Explore',style: TextStyle(color: Colors.white),),),
 
         new BottomNavigationBarItem(
             icon: Icon(Icons.add_circle_outline,color: Colors.white,size: 42.0),
@@ -212,9 +212,9 @@ class MyAppState extends State<MyApp> {
             icon: Icon(Icons.notifications,color: Colors.white,size: 22.0),
             title: Text('Notify',style: TextStyle(color: Colors.white),)),
         new BottomNavigationBarItem(
-            icon: Icon(Icons.person,color: Colors.white,size: 22.0),
-            title: Text(
-              'Me',style: TextStyle(color: Colors.white),),),
+          icon: Icon(Icons.person,color: Colors.white,size: 22.0),
+          title: Text(
+            'Me',style: TextStyle(color: Colors.white),),),
       ],
     );
   }
