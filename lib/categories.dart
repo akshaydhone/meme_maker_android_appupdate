@@ -138,7 +138,7 @@ class _CategoriesState extends State<CategoriesPage> {
             layout,
             SizedBox(height: 24.0),
             video,
-            SizedBox(height: 24.0)
+            SizedBox(height: 24.0),
             //forgotLabel
           ],
         ),

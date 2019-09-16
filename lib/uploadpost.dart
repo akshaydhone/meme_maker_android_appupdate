@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
+import 'home_screen.dart';
+import 'image_picker_dialog.dart';
+import 'image_picker_handler.dart';
+import 'categories.dart';
 
 class UploadStateScreen extends StatefulWidget {
   static String tag = 'upload-page';
@@ -8,6 +14,20 @@ class UploadStateScreen extends StatefulWidget {
 }
 
 class _UploadState extends State<UploadStateScreen> {
+
+  File image;
+
+//  To use Gallery or File Manager to pick Image
+//  Comment Line No. 19 and uncomment Line number 20
+  picker() async {
+    //Code to execute when Floating Action Button is clicked
+    Navigator.of(context)
+        .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
+      return new HomeScreen(title: 'Select Image');
+    }));
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +43,7 @@ class _UploadState extends State<UploadStateScreen> {
         ],
 
       ),
+
 
 
     );
@@ -64,6 +85,7 @@ class _UploadState extends State<UploadStateScreen> {
 
   FloatingActionButton(
                 //onPressed: _incrementCounter,
+    onPressed: picker,
                 tooltip: 'Increment',
                 child: Icon(Icons.camera_alt),
               ),

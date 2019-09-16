@@ -20,6 +20,8 @@ dependencies:
   flutter:
     sdk: flutter
   image_picker: ^0.4.5
+  image_cropper: ^0.0.4
+
 
   outline_material_icons: ^0.1.0
   timeago: ^2.0.14
@@ -31,6 +33,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   google_sign_in: ^4.0.7
   firebase_auth: ^0.14.0+5
+
 
 dev_dependencies:
   flutter_test:

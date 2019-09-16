@@ -10,6 +10,9 @@ import 'package:meme_maker/home_feed_page.dart';
 import 'package:meme_maker/ui_utils.dart';
 import 'login_page.dart';
 import 'accountBottomIconScreen.dart';
+import 'image_picker_handler.dart';
+import 'image_picker_dialog.dart';
+import 'home_screen.dart';
 
 void main() => runApp(new MyApp());
 class MyApp extends StatefulWidget {
