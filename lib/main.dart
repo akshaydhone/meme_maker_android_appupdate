@@ -13,6 +13,7 @@ import 'accountBottomIconScreen.dart';
 import 'image_picker_handler.dart';
 import 'image_picker_dialog.dart';
 import 'home_screen.dart';
+import 'textoverimage.dart';
 
 void main() => runApp(new MyApp());
 class MyApp extends StatefulWidget {
@@ -48,7 +49,7 @@ class MyAppState extends State<MyApp> {
         break;
 
       case 1:
-        child = FlutterLogo();
+        child = MyHomePage();
         break;
 
       case 2:

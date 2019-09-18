@@ -116,7 +116,9 @@ class _CategoriesState extends State<CategoriesPage> {
         'Forgot password?',
         style: TextStyle(color: Colors.black54),
       ),
-      onPressed: () {},
+      onPressed: () {
+
+      },
     );
 
     return Scaffold(
