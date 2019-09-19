@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-class MyApp extends StatelessWidget {
+class Detail3Screen extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page',),
+
     );
   }
 }
@@ -73,12 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Colors.blue,
-                    image: DecorationImage(
-                        image: new NetworkImage(
-                            "https://thumbs.dreamstime.com/b/funny-face-baby-27701492.jpg"),
-                        fit: BoxFit.fill),
+                  borderRadius: BorderRadius.circular(5),
+                  color: Colors.blue,
+                  image: DecorationImage(
+                      image: new NetworkImage(
+                          "http://webautodev.com/images-a/image04.JPG"),
+                      fit: BoxFit.fill),
                 ),
               ),
               HomePages()

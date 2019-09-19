@@ -14,6 +14,7 @@ import 'image_picker_handler.dart';
 import 'image_picker_dialog.dart';
 import 'home_screen.dart';
 import 'textoverimage.dart';
+import 'listofmemes.dart';
 
 void main() => runApp(new MyApp());
 class MyApp extends StatefulWidget {
@@ -56,7 +57,7 @@ class MyAppState extends State<MyApp> {
         child=  CategoriesPage();
         break;
       case 3:
-        child= FlutterLogo();
+        child= MyListMeme();
         break;
       case 4:
         child=AccountBottomIconScreen();

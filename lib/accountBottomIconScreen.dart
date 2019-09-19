@@ -221,12 +221,20 @@ class _AccountBottomIconScreenState extends State<AccountBottomIconScreen> {
           gridDelegate:
               SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
           itemBuilder: (BuildContext context, int index) {
+
             return new Container(
+
               margin: EdgeInsets.all(2.0),
               color: Colors.grey,
+
               child: new Image.asset("assets/images/pic$index.png"),
+
+
             );
-          }),
+
+          }
+
+          ),
     ));
   }
 }

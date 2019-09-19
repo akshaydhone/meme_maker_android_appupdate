@@ -68,7 +68,8 @@ class _CategoriesState extends State<CategoriesPage> {
           Navigator.of(context)
               .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
             return new UploadStateScreen();
-          }));
+          }
+          ));
         },
       ),
     );
