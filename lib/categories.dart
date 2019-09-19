@@ -60,7 +60,8 @@ class _CategoriesState extends State<CategoriesPage> {
         ),
         color: Color(0xffD3D3D3),
         icon: Icon(Icons.photo_library,size: 25,), //`Icon` to display
-        label: Text('Upload a Post', style: TextStyle(color: Colors.black,fontSize: 20),), //`Text` to display
+        label: Text(
+          'Upload a Post', style: TextStyle(color: Colors.black,fontSize: 20),), //`Text` to display
         padding: EdgeInsets.all(15),
 
         onPressed: () {
@@ -89,7 +90,6 @@ class _CategoriesState extends State<CategoriesPage> {
           //...
         },
       ),
-
     );
 
 

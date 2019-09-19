@@ -226,10 +226,7 @@ class _AccountBottomIconScreenState extends State<AccountBottomIconScreen> {
 
               margin: EdgeInsets.all(2.0),
               color: Colors.grey,
-
               child: new Image.asset("assets/images/pic$index.png"),
-
-
             );
 
           }

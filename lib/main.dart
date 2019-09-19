@@ -57,7 +57,7 @@ class MyAppState extends State<MyApp> {
         child=  CategoriesPage();
         break;
       case 3:
-        child= MyListMeme();
+        child= FlutterLogo();
         break;
       case 4:
         child=AccountBottomIconScreen();
