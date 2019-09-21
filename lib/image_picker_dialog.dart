@@ -25,6 +25,7 @@ class ImagePickerDialog extends StatelessWidget {
     ).animate(new CurvedAnimation(
       parent: _controller,
       curve: Curves.fastOutSlowIn,
+
     ));
   }
 

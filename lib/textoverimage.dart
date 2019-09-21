@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
-        //
+
         // Try running your application with "flutter run". You'll see the
         // application has a blue toolbar. Then, without quitting the app, try
         // changing the primarySwatch below to Colors.green and then invoke
@@ -44,7 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
-    setState(() {
+    setState(
+            () {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
@@ -82,6 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               HomePages()
+
             ],
           ),
         ),
@@ -109,8 +111,6 @@ class _HomePagesState extends State<HomePages> {
       child: Positioned(
         left: offset.dx,
         top: offset.dy,
-
-
         child: GestureDetector(
           onPanUpdate: (details) {
             setState(() {
@@ -133,9 +133,9 @@ class _HomePagesState extends State<HomePages> {
                   decoration: InputDecoration(
                     //Add th Hint text here.
                     hintText: "Enter Text",
-                    hintStyle: TextStyle(
-                        fontSize: 30.0, color: Colors.white
-                    ),
+                    hintStyle: TextStyle
+                      (
+                        fontSize: 30.0, color: Colors.white),
                     // border: OutlineInputBorder( borderSide: BorderSide(color: Colors.red, width: 15.0)),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -143,9 +143,7 @@ class _HomePagesState extends State<HomePages> {
                     ),
                   ),
                 ),
-
               ),
-
             ),
           ),
         ),

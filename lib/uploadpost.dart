@@ -5,6 +5,7 @@ import 'home_screen.dart';
 import 'image_picker_dialog.dart';
 import 'image_picker_handler.dart';
 import 'categories.dart';
+import 'page0.dart';
 
 class UploadStateScreen extends StatefulWidget {
   static String tag = 'upload-page';
@@ -24,7 +25,9 @@ class _UploadState extends State<UploadStateScreen> {
     Navigator.of(context)
         .push(MaterialPageRoute<Null>(builder: (BuildContext context) {
       return new HomeScreen(title: 'Select Image');
-    }));
+    }
+    )
+    );
   }
 
 
@@ -39,13 +42,8 @@ class _UploadState extends State<UploadStateScreen> {
           //_centerButtons(),
           _displayImages(),
           _floatingbutton(),
-
         ],
-
       ),
-
-
-
     );
   }
 
@@ -214,7 +212,9 @@ class _UploadState extends State<UploadStateScreen> {
                           style: new TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
-                      onTap: () {},
+                      onTap: () {
+
+                      },
                     ),
                   ],
                 ),
@@ -261,7 +261,9 @@ class _UploadState extends State<UploadStateScreen> {
                     Icons.bookmark_border,
                     size: 30.0,
                   ),
-                  onPressed: () {}),
+                  onPressed: () {
+                  }
+                  ),
             ],
           ),
           new Container(
@@ -272,7 +274,7 @@ class _UploadState extends State<UploadStateScreen> {
       ),
     );
   }
-
+  var pages=[DetailScreen()];
   Widget _displayImages() {
     return Flexible(
         child: new Container(
@@ -286,7 +288,16 @@ class _UploadState extends State<UploadStateScreen> {
                   color: Colors.grey,
                   child: new Image.asset("assets/images/pic$index.png"),
                 );
-              }),
-        ));
+              }
+
+          ),
+
+        )
+    );
   }
+
+
+
+
+
 }
