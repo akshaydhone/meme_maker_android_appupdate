@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+//import 'package:firebase_auth/firebase_auth.dart';
 import 'home.dart';
 import 'categories.dart';
 import 'search.dart';
@@ -8,13 +8,14 @@ import 'package:flutter/services.dart';
 import 'package:outline_material_icons/outline_material_icons.dart';
 import 'package:meme_maker/home_feed_page.dart';
 import 'package:meme_maker/ui_utils.dart';
-import 'login_page.dart';
+//import 'login_page.dart';
 import 'accountBottomIconScreen.dart';
 import 'image_picker_handler.dart';
 import 'image_picker_dialog.dart';
 import 'home_screen.dart';
 import 'textoverimage.dart';
 import 'listofmemes.dart';
+import 'profilepagememe.dart';
 
 void main() => runApp(new MyApp());
 class MyApp extends StatefulWidget {
@@ -31,6 +32,7 @@ class MyAppState extends State<MyApp> {
     CategoriesPage(),
     SearchPage(),
     FavouritePage(),
+
   ];
   static const _kAddPhotoTabIndex = 2;
   int _tabSelectedIndex = 0;
@@ -48,11 +50,9 @@ class MyAppState extends State<MyApp> {
       case 0:
         child = _buildBody();
         break;
-
       case 1:
         child = MyHomePage();
         break;
-
       case 2:
         child=  CategoriesPage();
         break;
@@ -77,7 +77,6 @@ class MyAppState extends State<MyApp> {
           backgroundColor: Color(0xfffd7878),
           title: Row(
             children: <Widget>[
-
               SizedBox(width: 12.0),
               GestureDetector(
                 child: Text(
@@ -109,7 +108,6 @@ class MyAppState extends State<MyApp> {
 
       ),
     );
-
   }
 
   void dispose() {

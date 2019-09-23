@@ -1,8 +1,13 @@
 import 'dart:io';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
+import 'package:path/path.dart';
 import 'package:flutter/material.dart';
 import 'package:meme_maker/image_picker_handler.dart';
 import 'package:meme_maker/image_picker_dialog.dart';
+import 'categories.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key, this.title}) : super(key: key);
@@ -54,6 +59,18 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
+    Future uploadPic(BuildContext context) async{
+      String fileName = basename(_image.path);
+      StorageReference firebaseStorageRef = FirebaseStorage.instance.ref().child(fileName);
+      StorageUploadTask uploadTask = firebaseStorageRef.putFile(_image);
+      StorageTaskSnapshot taskSnapshot=await uploadTask.onComplete;
+      setState(() {
+        print("Profile Picture uploaded");
+        Scaffold.of(context).showSnackBar(SnackBar(content: Text('Profile Picture Uploaded')));
+      }
+      );
+    }
+
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(widget.title,
@@ -85,8 +102,8 @@ class _HomeScreenState extends State<HomeScreen>
             children: <Widget>[
 
               new Container(
-                height: 500.0,
-                width: 500.0,
+                height: 400.0,
+                width: 400.0,
                 decoration: new BoxDecoration(
                   color: const Color(0xff7c94b6
                   ),
@@ -95,6 +112,8 @@ class _HomeScreenState extends State<HomeScreen>
                     image: new ExactAssetImage(_image.path),
                     fit: BoxFit.cover,
                   ),
+
+
                   border:
                   Border.all(
                       color: Colors.lightBlueAccent, width: 5.0
@@ -105,11 +124,34 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                 ),
               ),
-             HomePages()
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+
+                children: <Widget>[
+
+             new Container(
+              child:new Align(
+              alignment:Alignment.bottomLeft,
+              child: RaisedButton(
+                elevation: 5,
+                color: Colors.red,
+                child: Text("Done"),
+
+                onPressed:()
+                {
+                  uploadPic(context);
+                },
+              ),
+        ),
+      ),
+
+                ],
+              ),
+              HomePages(),
             ],
           )
         ),
-
       ),
 
     );
@@ -158,8 +200,10 @@ class _HomePagesState extends State<HomePages> {
           onPanUpdate: (details) {
             setState(() {
               offset = Offset(
-                  offset.dx + details.delta.dx, offset.dy + details.delta.dy);
-            });
+                  offset.dx + details.delta.dx, offset.dy + details.delta.dy
+              );
+            }
+            );
           },
           child: SizedBox(
             width: 300,
@@ -179,6 +223,7 @@ class _HomePagesState extends State<HomePages> {
                     hintStyle: TextStyle(
                         fontSize: 30.0, color: Colors.white
                     ),
+
                     // border: OutlineInputBorder( borderSide: BorderSide(color: Colors.red, width: 15.0)),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -187,17 +232,24 @@ class _HomePagesState extends State<HomePages> {
                   ),
                 ),
               ),
-
             ),
           ),
+
         ),
       ),
     );
   }
 
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
 
 
