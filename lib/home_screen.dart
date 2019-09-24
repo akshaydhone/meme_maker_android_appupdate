@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:meme_maker/image_picker_handler.dart';
 import 'package:meme_maker/image_picker_dialog.dart';
 import 'categories.dart';
+import 'uploadpost.dart';
+import 'main.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key, this.title}) : super(key: key);
@@ -72,6 +74,7 @@ class _HomeScreenState extends State<HomeScreen>
     }
 
     return new Scaffold(
+      resizeToAvoidBottomInset : false,
       appBar: new AppBar(
         title: new Text(widget.title,
         style: new TextStyle(
@@ -124,6 +127,7 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                 ),
               ),
+              HomePages(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -137,10 +141,15 @@ class _HomeScreenState extends State<HomeScreen>
                 elevation: 5,
                 color: Colors.red,
                 child: Text("Done"),
-
                 onPressed:()
                 {
                   uploadPic(context);
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyApp()),
+                );
+                  //UploadStateScreen();
+
                 },
               ),
         ),
@@ -148,14 +157,13 @@ class _HomeScreenState extends State<HomeScreen>
 
                 ],
               ),
-              HomePages(),
+              //HomePages(),
             ],
           )
         ),
       ),
 
     );
-
   }
 
   @override
@@ -187,6 +195,7 @@ class HomePages extends StatefulWidget {
 
 class _HomePagesState extends State<HomePages> {
   Offset offset = Offset.zero;
+ File _image;
 
   @override
   Widget build(BuildContext context) {

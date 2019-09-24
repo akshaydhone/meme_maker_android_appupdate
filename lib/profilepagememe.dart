@@ -138,7 +138,6 @@ class _ProfilePageState extends State<ProfilePage> {
                     onPressed: () {
                       uploadPic(context);
                     },
-
                     elevation: 4.0,
                     splashColor: Colors.blueGrey,
                     child: Text(
